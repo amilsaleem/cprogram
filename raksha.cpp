@@ -1,4 +1,4 @@
-#include<iostream.h>
+#include<iostream>
 using namespace std;
 
 class raksha
@@ -8,27 +8,27 @@ class raksha
 		void input();
 		void output();
 	
-		void getgift();
+		void getgift(raksha &a,raksha &b);
 		
 };
 void raksha::input()
 {
-	cout << "Enter money";
+	cout<< "Enter money";
 	cin >>money;
 }
 void raksha::output()
 {
 		
-			cout<<money;
+			cout<<"money"<<money<<endl;
 			
 		
 }
-void raksha::getgift(raksha &e1,raksha &e2)
+void  raksha::getgift(raksha &a,raksha &b)
 
 {
-	money=e1.money+e2.money;
-	e1.money=0;
-	e2.money=0;
+	money=a.money+b.money;
+	a.money=0;
+	b.money=0;
 	
 	
 }
@@ -39,4 +39,6 @@ int main()
 	e2.input();
 	s.getgift(e1,e2);
 	s.output();
+	e1.output();
+	e2.output();
 }
